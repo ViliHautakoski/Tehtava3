@@ -24,7 +24,6 @@ public class Safe {
             }
         
         else {
-            System.out.println("Väärä PIN-koodi!");
             return null;
         }
     }

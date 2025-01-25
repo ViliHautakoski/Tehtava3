@@ -36,17 +36,14 @@ public class App
                     case 3:
                         System.out.println("Anna PIN-koodi:");
                         String code = sc.nextLine();
-                        ArrayList<String> data = safe.printList(code);
-                        if(data != null){
-                            int k = 0;
-                            while(k < data.size()){
-                                System.out.println(data.get(k));
-                                k++;
+                        if(safe.printList(code)!=null){
+                            for(String item : safe.printList(code)){
+                                System.out.println(item);
                             }
                         }
-                            else{
-                                break;
-                            }
+                        else{
+                            System.out.println("Väärä PIN-koodi!");
+                        }
                         break;
                     case 0:
                         exit = true;
