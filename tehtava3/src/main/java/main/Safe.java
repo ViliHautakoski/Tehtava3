@@ -18,17 +18,14 @@ public class Safe {
             safeFolder.add(syote);
     }
 
-    public void printlist(String code){
+    public ArrayList<String> printList(String code){
         if(pinCode.equals(code)){
-            int i = 0;
-            while(i < safeFolder.size()){
-                System.out.println(safeFolder.get(i));
-                i++;
+           return safeFolder;
             }
-        }
+        
         else {
             System.out.println("Väärä PIN-koodi!");
+            return null;
         }
     }
-
 }

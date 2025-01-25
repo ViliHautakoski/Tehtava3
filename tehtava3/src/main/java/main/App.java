@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App 
@@ -35,18 +36,28 @@ public class App
                     case 3:
                         System.out.println("Anna PIN-koodi:");
                         String code = sc.nextLine();
-                        safe.printlist(code);
+                        ArrayList<String> data = safe.printList(code);
+                        if(data != null){
+                            int k = 0;
+                            while(k < data.size()){
+                                System.out.println(data.get(k));
+                                k++;
+                            }
+                        }
+                            else{
+                                break;
+                            }
                         break;
                     case 0:
                         exit = true;
                         break;
                     default:
                         System.out.println("Väärä syöte.");
-                        break;
                 }
             }
         }
-            sc.close();
-            System.out.println("Kiitos ohjelman käytöstä.");
+        sc.close();
+        System.out.println("Kiitos ohjelman käytöstä.");    
     }
+        
 }
