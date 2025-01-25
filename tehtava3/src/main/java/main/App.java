@@ -35,7 +35,7 @@ public class App
                     case 3:
                         System.out.println("Anna PIN-koodi:");
                         String code = sc.nextLine();
-                        safe.printsafeFolder(code);
+                        safe.printlist(code);
                         break;
                     case 0:
                         exit = true;
@@ -49,5 +49,4 @@ public class App
             sc.close();
             System.out.println("Kiitos ohjelman käytöstä.");
     }
-
 }
