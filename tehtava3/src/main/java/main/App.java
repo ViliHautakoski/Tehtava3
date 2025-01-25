@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ){
-        Safe safe = new Safe();
+        Safe safe = new Safe("0000");
         
         Scanner sc = new Scanner(System.in);
 
