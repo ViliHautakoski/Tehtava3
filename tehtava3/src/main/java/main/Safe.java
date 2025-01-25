@@ -18,7 +18,7 @@ public class Safe {
             safeFolder.add(syote);
     }
 
-    public void printsafeFolder(String code){
+    public void printlist(String code){
         if(pinCode.equals(code)){
             int i = 0;
             while(i < safeFolder.size()){
