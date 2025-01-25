@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class Safe {
     private String pinCode;
-    private ArrayList<String> safeFolder = new ArrayList<>();
+    private ArrayList<String> safeFolder;
     
     public Safe(){
-        pinCode = "0000";
+        this.pinCode = "0000";
+        this.safeFolder = new ArrayList<>();
     }
 
     public void changePin(String code){
@@ -27,7 +28,7 @@ public class Safe {
             }
         }
         else {
-            System.out.println("Väärä koodi.");
+            System.out.println("Väärä PIN-koodi!");
         }
     }
 
